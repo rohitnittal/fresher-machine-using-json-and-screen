@@ -1,0 +1,50 @@
+import react,{usestate} from 'react';
+
+const searchcontact=({contacts})={
+ const[searchterm, setsearchterm]=usestate(");
+ const[searchresults, setsearchresults]=usestate([]);
+
+ const handlesearch=(event)={event.preventdefault();
+ const searchtermlowercase=searchterm.tolowercase();
+ contacts.filter(contact={
+ return(
+ contact.name.tolowercase().
+ includes(searchterm lowercase)
+ ||
+ contact.email.tolowercase().
+ includes(searchterm lowercase)
+ ||
+ contact.phone.tolowercase().
+ includes(searchterm lowercase)
+ );
+ });
+ set searchresults(searchresults);
+ };
+
+ return(
+ <div>
+ <form onsubmit={handlesearch}>
+ <input type="text"
+ value={searchterm}
+ onchange={(event)=setsearchterm(event.target.value)}
+ placeholder="search for a contact"
+ />
+ <button type="submit">search</button>
+ </form>
+ <ul>
+ {searchresults.map(contact=(
+  <li key={contact.id}>{contact.name}</li>
+  ))}
+  </ul>
+  </div>
+  );
+  };
+
+  export default searchcontact;
+ 
+
+
+ 
+
+
+ 
