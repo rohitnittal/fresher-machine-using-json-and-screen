@@ -1,0 +1,36 @@
+{
+  "contacts":[
+    {
+      "id":1,
+      "name":"John doe",
+      "email":"johndoe@example.com",
+      "phone":"23-456-7890"
+    },
+    {
+    "id":2,
+    "name":"Jane smith",
+    "email":"janesmith@example.com",
+    "phone":"098-765-4321"
+    },
+    {
+    "id":3,
+    "name":"Bob johnson",
+    "email":"bobjohnson@example.com",
+    "phone":"555-123-4567"
+    },
+    {
+    "id":4,
+    "name":"Alice brown",
+    "email":"alicebrown@example.com",
+    "phone":"789-012-3456"
+    }
+  ]
+}
+    
+
+
+    
+
+
+  
+
