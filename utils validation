@@ -1,0 +1,14 @@
+export const validatecontact=(contact)=
+{
+const errors={};
+if(!contact.name){
+ errors.name='name is required';
+}
+if(!contact.email){
+ errors.email='email is required';
+}
+if(!contact.phone){
+ errors.phone='phone is required';
+}
+return errors;
+};
