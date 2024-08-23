@@ -1,0 +1,54 @@
+import react,{usestate} from 'react';
+import { validatecontact} from '.../utils/
+validation;
+
+const editcontact=({contact})={
+const[name,setname]=usestate(contact.name);
+const[email,setemail]=usestate(contact.email);
+const[phone,setphone]=usestate(contact.phone);
+const[errors,seterrors]=usestate({});
+
+const handlesubmit=(event)={
+event.preventdefault();
+const updatedcontact={name,email,phone};
+const errors=validatecontact(updatedcontact);
+if(object.keys(errors).length===0){
+console.log('contact updated successfully!');
+}else{
+seterror(errors);
+}
+};
+
+return(
+<form onsubmit={handlesubmit}>
+<label>
+name:<input type="text"value={name}
+onchange={(event)=setname(event.target.value)}/>
+</label>
+<label>
+email:<input type="email"
+value={email} onchange={(event)=
+setemail(event.target.value)}/>
+</label>
+<label>
+phone:<input type="text"value={phone}
+onchange={(event)=setphone(event.target.value)}/>
+</label>
+<button type="submit">update contact</button>
+   {errors &&(
+   <ul>
+   {object.keys(errors).map((error,index)
+   {
+   <li key={index}>{errors[error]}</li>
+   ))}
+   </ul>
+   )}
+   </form>
+   );
+   };
+
+   export default editcontact;
+
+
+
+
