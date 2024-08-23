@@ -1,0 +1,5 @@
+export const fetchcontacts=()={
+ return fetch("https://raw.githubusercontent.com/bitcotdev/fresher-machin-test/main/json/sample.json')
+    .then(response=response.json())
+    .then(data=data.contacts);
+};
